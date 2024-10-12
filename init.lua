@@ -103,7 +103,7 @@ vim.g.have_nerd_font = false
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -651,15 +651,15 @@ require('lazy').setup({
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-      require'lspconfig'.julials.setup{
-        on_new_config = function(new_config, _)
-            local julia = vim.fn.expand("~/.julia/environments/nvim-lspconfig/bin/julia")
-            if require'lspconfig'.util.path.is_file(julia) then
-          vim.notify("Hello!")
-                new_config.cmd[1] = julia
-            end
-        end
-      }
+      -- require'lspconfig'.julials.setup{
+      --   on_new_config = function(new_config, _)
+      --       local julia = vim.fn.expand("~/.julia/environments/nvim-lspconfig/bin/julia")
+      --       if require'lspconfig'.util.path.is_file(julia) then
+      --     vim.notify("Hello!")
+      --           new_config.cmd[1] = julia
+      --       end
+      --   end
+      -- }
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)

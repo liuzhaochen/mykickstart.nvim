@@ -3,9 +3,7 @@ return{
     dependencies = {'kevinhwang91/promise-async'}, 
     keys={
         { "zM", function() require("ufo").closeAllFolds() end, desc = "Close All Folds" },
-        { "zR", function() require("ufo").openAllFolds() end, desc = "Close All Folds" },
-        -- vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-        -- vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+        { "zR", function() require("ufo").openAllFolds() end, desc = "Open All Folds" }, 
     },
     init = function() 
         vim.o.foldcolumn = '1' -- '0' is not bad
