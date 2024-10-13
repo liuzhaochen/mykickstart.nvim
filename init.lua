@@ -217,6 +217,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
@@ -653,7 +654,7 @@ require('lazy').setup({
 
       -- require'lspconfig'.julials.setup{
       --   on_new_config = function(new_config, _)
-      --       local julia = vim.fn.expand("~/.julia/environments/nvim-lspconfig/bin/julia")
+      --       local julia = vim.fn.expand("C:/Users/lzc/.julia/environments/nvim-lspconfig/bin/julia")
       --       if require'lspconfig'.util.path.is_file(julia) then
       --     vim.notify("Hello!")
       --           new_config.cmd[1] = julia
